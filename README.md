@@ -65,7 +65,7 @@ A Web Content Management System (WCMS) is used for developing, editing, managing
 
 ### Admin : Users Registered
 
-![](Screenshots/AdminDashboard.png)
+![](Screenshots/AdminUsersList.png)
 
 
 ### Admin : List of Articles
