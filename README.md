@@ -4,6 +4,7 @@ A Web Content Management System (WCMS) is used for developing, editing, managing
 
 
 
+
 ## Features
 
  * Authentication and Authorization is implemented using Spring Security.
@@ -13,6 +14,7 @@ A Web Content Management System (WCMS) is used for developing, editing, managing
  * WYSIWYG editor to create, modify content using Summernote JS library.
 
  * Passwords are hashed using Bcrypt and Input validation is done using JavaBeans Validation.
+
 
 
 
@@ -27,70 +29,72 @@ A Web Content Management System (WCMS) is used for developing, editing, managing
  * MySQL Database
 
 
+
+
 ## ScreenShots
 
 ### Home Page
 
-![](Screenshots/index.PNG)
+![](Screenshots/index.png)
 
 
 ### Article View
 
-![](Screenshots/indexArticleView.PNG)
+![](Screenshots/indexArticleView.png)
 
 
 ### Login Page
 
-![](Screenshots/login1.PNG)
+![](Screenshots/login1.png)
 
 
 ### Registration Page
 
-![](Screenshots/UserRegister.PNG)
+![](Screenshots/UserRegister.png)
 
 
 ### Registration with Validation 
 
-![](Screenshots/UserRegisterValidation.PNG)
+![](Screenshots/UserRegisterValidation.png)
 
 
 ### Admin : Dashboard
 
-![](Screenshots/AdminDashboard.PNG)
+![](Screenshots/AdminDashboard.png)
 
 
 ### Admin : Users Registered
 
-![](Screenshots/AdminDashboard.PNG)
+![](Screenshots/AdminDashboard.png)
 
 
 ### Admin : List of Articles
 
-![](Screenshots/AdminArticlesList.PNG)
+![](Screenshots/AdminArticlesList.png)
 
 
 ### Admin : Articles View
 
-![](Screenshots/AdminArticleView.PNG)
+![](Screenshots/AdminArticleView.png)
 
 
 ### Editor : Dashboard
 
-![](Screenshots/EditorDashboard.PNG)
+![](Screenshots/EditorDashboard.png)
 
 
 ### Editor : Article View
 
-![](Screenshots/EditorArticleView.PNG)
+![](Screenshots/EditorArticleView.png)
 
 
 ### Editor : Profile
 
-![](Screenshots/EditorProfile.PNG)
+![](Screenshots/EditorProfile.png)
 
 
 ### Editor : Article Creator
 
-![](Screenshots/EditorArticleCreator.PNG)
+![](Screenshots/EditorArticleCreator.png)
 
 
