@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "multipart.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'multipart.enabled'"
+  },
+  {
+    "name": "spring.http.multipart.max-request-size",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.http.multipart.max-request-size'"
+  },
+  {
+    "name": "spring.http.multipart.max-file-size",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.http.multipart.max-file-size'"
+  }
+]}

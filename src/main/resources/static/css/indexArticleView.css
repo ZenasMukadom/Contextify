@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+
+
+
+.container-fluid.Zcontent{
+	margin-top: 80px;
+}
+
+
+p {
+    display:inline;
+}
+
+#MainContainer{
+	background-color : #FFA726 ;
+}
+
+.card{
+	margin-left :150px;
+	margin-right :150px;
+}

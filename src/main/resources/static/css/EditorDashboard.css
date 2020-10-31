@@ -1,0 +1,57 @@
+ .sidebar-fixed {
+      height: 100vh;
+      width: 270px;
+      -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      z-index: 1050;
+      background-color: #fff;
+      padding: 0 1.5rem 1.5rem;
+    }
+
+    .sidebar-fixed .list-group .active {
+      -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+    .sidebar-fixed .logo-wrapper {
+      padding: 0.5rem;
+    }
+
+    .sidebar-fixed .logo-wrapper img {
+      height: 120px;
+    }
+
+    @media (min-width: 1200px) {
+
+      .navbar,
+      .page-footer,
+      main {
+        padding-left: 270px;
+      }
+    }
+
+    @media (max-width: 1199.98px) {
+      .sidebar-fixed {
+        display: none;
+      }
+    }
+
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+
+      color: white;
+      text-align: center;
+    }
+    
+    #CardColor{
+    	background-image: linear-gradient(to right bottom, #ffa726, #fc8e25, #f77328, #ef582e, #e53935);
+    }

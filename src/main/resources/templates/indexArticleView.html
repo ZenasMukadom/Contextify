@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Contextify</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="/mdb/css/bootstrap.min.css">
+<!-- Material Design Bootstrap -->
+<link rel="stylesheet" href="/mdb/css/mdb.min.css">
+<!-- ZCustom Css -->
+<link rel="stylesheet" href="/css/indexArticleView.css">
+<!-- Font Awesome -->
+<link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+	rel="stylesheet" />
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	rel="stylesheet" />
+
+
+
+</head>
+
+<body id="MainContainer">
+
+	<!--------------------Navbar Starts-------------------------->
+	<nav
+		class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar orange lighten-1">
+
+		<!-- Navbar brand -->
+		<a class="navbar-brand" href="#">Contextify</a>
+
+		<!-- Collapse button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#basicExampleNav" aria-controls="basicExampleNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Collapsible content -->
+		<div class="collapse navbar-collapse" id="basicExampleNav">
+
+			<!-- Links -->
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" th:href="@{/}">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item"><a class="nav-link" th:href="@{/login1}">Login</a>
+				</li>
+			</ul>
+			<!-- Links -->
+
+
+		</div>
+		<!-- Collapsible content -->
+
+	</nav>
+
+	<!--------------------Navbar Ends-------------------------->
+
+	<!----------------------------- Logo Banner Image Starts ------------------------>
+	
+	
+	
+	<!----------------------------- Logo Banner Image Ends ------------------------>
+
+
+	<!---------------------------------------------------------------Content Starts ------------------------------------------->
+
+
+	<main class="pt-5 mx-lg-2">
+
+		<div class="container-fluid mt-5">
+		
+		 <div class="card border-0 mb-4 wow fadeIn">
+           
+          <!--Card content-->
+		
+		<!---------------------- Article View  Starts ------------------------------>
+          <div class="card-body col-12 justify-content-between">
+          	<img class="card-img-top" th:src="${'data:image/jpeg;base64,'+{IndexArticleContent.image}}" style="width: 100%; height:100%;"
+				      alt="Card image cap"> <br> <br>
+            	<h2><b th:text= "${IndexArticleContent.title}"></b></h2>
+            	
+            	<h4 class="card-title"></h4>
+				    <div>
+					<p class="card-text">By :</p> 
+					<p class="card-text" th:text= "${IndexArticleContent.userId_fkid.firstname}"></p>
+					<p class="card-text" th:text= "${IndexArticleContent.userId_fkid.lastname}"></p>
+					</div>
+					<p class="card-text" th:text= "${IndexArticleContent.publishedDate}"></p>
+					 <br>
+					<hr>
+				
+				  <!-- Card content -->
+				  <div class="card-body">
+				
+				    <!-- Title -->
+				    
+				    <p th:utext= "${IndexArticleContent.content}"></p>
+
+				  </div>
+				  
+			</div>	
+			
+					<div>
+				    	<!-- Button -->
+				    	<a th:href="@{/}" class="btn btn-info btn-lg my-2 orange lighten-1" style="float: right;">Back</a>
+				    </div>
+            	
+<!---------------------- Article View  Ends ------------------------------>
+		
+		</div>
+		
+		</div>
+	</main>
+
+	<!--------------------------------------------------------- Content Ends ----------------------------------------------------->
+
+
+
+
+
+
+	<!-- Footer -->
+
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script src="mdb/js/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="mdb/js/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="mdb/js/bootstrap.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="mdb/js/mdb.min.js"></script>
+	<div class="hiddendiv common"></div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Contextify</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- ZCustom CSS -->
+  <link type="text/css" rel="stylesheet" href="/css/EditorDashboard.css" >
+</head>
+
+<body class="grey lighten-3">
+
+<!--------------------------------------------------------Header Nav + SideBar Starts ---------------------------------------------------->
+    <!--Main Navigation-->
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+
+        <div class="container-fluid">
+
+          <!-- Brand -->
+          <a class="navbar-brand waves-effect" >
+            <strong class="orange-text">Contextify</strong>
+          </a>
+
+          <!-- Collapse -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                
+              </li>
+            </ul>
+
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
+              <li class="nav-item">
+                <a th:href="@{/logout}" class="nav-link border border-light rounded waves-effect orange lighten-1">
+                  <i class="fas fa-sign-out-alt mr-2"></i>LogOut
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+
+      <!-- Sidebar -->
+      <div class="sidebar-fixed position-fixed">
+        <a class="logo-wrapper waves-effect">
+          <img src="/images/Logo_poster.PNG" class="img-fluid"  alt="" />
+        </a>
+
+        <div class="list-group list-group-flush">
+          <a th:href="@{/login1/EditorPage}" class="list-group-item active waves-effect orange lighten-1">
+            <i class="fas fa-chart-pie mr-3"></i>Dashboard
+          </a>
+          <a th:href="@{/login1/EditorPage/ProfileUpdate}" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-user mr-3"></i>Profile</a>
+          <a th:href="@{/login1/EditorPage/ArticleCreator}" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-table mr-3"></i>Articles</a>
+        </div>
+      </div>
+      <!-- Sidebar -->
+    </header>
+    <!--Main Navigation-->
+    
+<!--------------------------------------------------------Header Nav + SideBar Ends ---------------------------------------------------->
+
+
+<!---------------------------------------------------------------------------- Main Content Starts -------------------------------------------------------------->
+    <main class="pt-5 mx-lg-2">
+      <div class="container-fluid mt-5">
+      	
+      
+ <!-----------------------------------------------Card 1 & ROW 1 Welcome User Starts   ------------------------------------------->
+ 
+ 	<div class="row  wow fadeIn">
+ 		<div class="col-md-12">
+ 		
+        <!-- Heading -->
+        <div class="card mb-4 wow fadeIn">
+        
+          <!--Card content-->
+          <div class="card-body d-sm-flex justify-content-between">
+            <h4 class="mb-2 mb-sm-0 pt-1">
+
+              <a>Welcome
+                <b th:text="${userRegister.firstname}"></b>
+                <b th:text="${userRegister.lastname}"></b>
+
+              </a>
+            </h4>
+          </div>
+        </div>
+        <!-- Heading -->
+        </div>
+     </div>
+<!-----------------------------------------------------------    Card 1 & ROW 1  Welcome User Ends   ------------------------------------------------>
+
+
+
+        <!--------------------------------------------------------------     ROW 2 Starts   --------------------------------------------------------------->
+        <div class="row wow fadeIn">
+        
+       <!---------------------------------------------Card 2 Post Drafted Status  Starts ----------------------------------------->
+          <div class="col-md-3 mb-2">
+            <!--Card-->
+            <div class="card">
+              <!--Card content-->
+              <div id="CardColor" class="gradient-card-header">
+              		
+              	<div class = "row">
+              		<div class="col-md-4">
+              			<div class="card-body">
+              				<a class="far fa-file-alt mr-2 fa-4x"></a>
+              			</div>
+              		</div>
+              		
+              	
+              		
+              		<div class="col-md-8">
+              			<div class="card-body">
+              			
+              				<div class="row">
+              					<h2 style="text-align: center" th:text="${countPublished.draftedPostCount}"></h2>
+              				</div>
+              				
+              				<div class="row">
+              						<h5>Post Drafted</h5>				
+              				</div>
+    
+              			</div>
+              			
+              		</div>
+              	</div>		
+	
+              </div>
+            </div>
+            <!--/.Card-->          
+            
+          </div>
+         <!---------------------------------------------Card 2 Post Drafted Status Ends ----------------------------------------->
+          
+		<!---------------------------------------------Card 3 Post Published Status Starts ----------------------------------------->
+          <div class="col-md-3 mb-2">
+            <!--Card-->
+            <div class="card">
+              <!--Card content-->
+              <div id="CardColor" class="gradient-card-header">
+              		
+              	<div class = "row">
+              		<div class="col-md-4">
+              			<div class="card-body">
+              				<a class="far fa-newspaper mr-2 fa-4x"></a>
+              			</div>
+              		</div>
+              		
+              	
+              		
+              		<div class="col-md-8">
+              			<div class="card-body">
+              			
+              				<div class="row">
+              					<h2 style="text-align: center" th:text="${countPublished.publishedPostCount}"></h2>
+              				</div>
+              				
+              				<div class="row">
+              						<h5>Post Published</h5>				
+              				</div>
+    
+              			</div>
+              			
+              		</div>
+              	</div>	
+              		
+	
+              </div>
+            </div>
+            <!--/.Card-->
+          </div>
+          <!---------------------------------------------Card 2 Post Published Status  Ends ----------------------------------------->
+          
+
+        </div>
+		<!----------------------------------------------------------------------- ROW 2 Ends   ------------------------------------------------------------->
+
+		<br>
+		<!----------------------------------------------------------------------- ROW 3 Starts -------------------------------------------------------------->
+		
+			<div class="row wow fadeIn">
+			
+			
+				 <div class="col-md-12 mb-2">
+		            <!--Card-->
+		            <div class="card">
+		              <!--Card content-->
+		              <div id="CardColor" class="gradient-card-header">
+							
+							<!---------------------- Table Starts ------------------------------>
+							    <table class="table table-striped">
+								  <thead class="orange lighten-1 white-text">
+								    <tr>
+								    
+								      <th scope="col"><h6>Title</h6></th>
+								      <th scope="col"><h6>Tags</h6></th>
+								      <th scope="col"><h6>Date Drafted</h6></th>
+								      <th scope="col"><h6>Status</h6></th>
+								      <th scope="col"><h6>Content</h6></th>
+								      
+								    </tr>
+								  </thead>
+								  
+									  <tbody>
+										   <tr th:each="article: ${EditorlistofArticles}">
+												<td th:text= "${article.title}"></td>
+												<td th:text= "${article.tags}"></td>
+												<td th:text= "${article.publishedDate}"></td>
+												<td th:text= "${article.articleStatus}"></td>
+												<td>
+												 <a th:href ="@{/login1/EditorPage/ArticleContentView/{id}(id=${article.id})}" class="btn btn-info btn-sm">View</a>
+											   	</td>
+									   		</tr>
+									  </tbody>
+								</table>
+
+            	
+							<!---------------------- Table Ends ------------------------------>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		
+		
+		<!------------------------------------------------------------------------ROW 3 Ends  ---------------------------------------------------------------->
+
+
+
+
+<!----------------------------------------========================= Main Content Ends ==================================----------------------------------------->
+
+</div>
+</main>
+    
+
+ <!----------------------------------- SCRIPTS ----------------------------------->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</body>
+
+</html>

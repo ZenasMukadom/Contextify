@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Contextify</title>
+
+   <!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <!-- ZCustom Css -->
+  <link rel="stylesheet"  type="text/css" href="css/login1.css">
+   <!-- Font Awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+
+   
+</head>
+<body>
+
+
+        <br><br>
+        <div class="container mb-5 mt-5" align="center">
+            <div class="card-deck" style="width:520px">
+                <div class="card shadow-lg p-3 mb-5 bg-white rounded mr-5 ">
+                    <div class="card-body text-center" style="height:100%">
+                        <ul class="nav nav-pills pl-2 pr-1 mb-3 " id="pills-tab" role="tablist" >
+                            <li class="nav-item">
+                                <a class="nav-link " id="pills-sigin-tab"  style="width:186px" th:href="@{/login1}" role="tab"
+                                aria-controls="pills-signin" aria-selected="true">Sign In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-register-tab"  style="width:186px" th:href="@{/Registration}" role="tab"
+                                aria-controls="pills-register" aria-selected="false">Register</a>
+                            </li>
+                  
+                        </ul>
+                        
+                        <div class="tab-content pt-2 pl-1" id="pills-tabContent">
+                              
+                            	
+	                            <div class="tab-pane fade show active" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+	                                <form  th:object="${userRegister}" th:action="@{/SubmittedUserRegistration}" class="text-center border border-light p-5" method="POST">
+	
+	                                    <p class="h4 mb-4">Register</p>
+	                                        
+	                                    <div class="form-group">
+	                                    	<input type="text"  class="form-control mb-4" placeholder="Username" 
+	                                    	th:field ="*{username}" autocomplete="off">
+	                                    	<p  class="alert alert-danger" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
+	                                    	
+	                                    </div>       
+	                                    
+	                                    
+	                                    <div class="form-group">
+		                                  	<input type="text"  class="form-control mb-4" placeholder="First Name" 
+		                                    th:field ="*{firstname}" autocomplete="off">
+		                                    <p class="alert alert-danger" th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}"></p>
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+		                                    <input type="text"  class="form-control mb-4" placeholder="Last Name" 
+		                                    th:field ="*{lastname}" autocomplete="off">
+		                                    <p class="alert alert-danger" th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"></p>
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+		                                    <input type="text"  class="form-control mb-4" placeholder="Email ID" 
+		                                    th:field ="*{email}" autocomplete="off">
+		                                    <p class="alert alert-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+	                                    </div>
+	                                        
+	                                    <div class="form-group">
+	                                    	<input type="password"  class="form-control mb-4" placeholder="Password"
+	                                    	 th:field ="*{password}">        
+	                                    	 <p class="alert alert-danger" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+	                                    </div>
+                   
+	                                    <input type="hidden" th:name="role" th:value="Editor">        
+
+	                                                                           
+	                                    <button class="btn btn-info btn-block my-4 orange lighten-1" type="submit">Register</button>
+	                                    
+	                                    <a th:href="@{/}" class="btn btn-outline-warning btn-block"><i class="fas fa-sign-out-alt mr-2"></i><b>Back to Home Page</b></a>
+				    					<br>
+
+	                                </form>
+	                            </div>
+                            
+                        <div>     
+                    </div>
+                </div>
+            </div>
+           
+    </div>
+    </div>
+    </div>
+    
+    
+    <!-- Footer -->
+
+   <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    
+
+</body>
+</html>

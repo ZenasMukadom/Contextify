@@ -1,0 +1,11 @@
+@charset "ISO-8859-1";
+
+
+
+.nav-pills > li > a.active {
+    background-color: #ffa726 !important;
+}
+
+.nav-pills > li > a:not(.active) {
+	color : black !important;
+}

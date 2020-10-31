@@ -1,0 +1,42 @@
+@charset "ISO-8859-1";
+
+
+
+.container-fluid.Zcontent{
+	margin-top: 80px;
+}
+
+
+.hero-banner {
+	padding: 195px 0;
+    position: relative;
+    background: url(../images/Logo_banner.png) left center no-repeat;
+    background-size: cover;
+}
+
+p {
+    display:inline;
+}
+
+#MainCard{
+	padding : 20px;
+	margin : 70px;
+	background-image: linear-gradient(to right bottom, #ffa726, #fc8e25, #f77328, #ef582e, #e53935);
+}
+
+#MainContainer{
+	background-color : #FFA726 ;
+}
+
+.card{
+	background-image: linear-gradient(to right bottom, #ffa726, #fc8e25, #f77328, #ef582e, #e53935);
+}
+
+.card-title{
+	color : black !important;
+	font-weight: bold !important;
+}
+
+.card-text{
+	color : black !important;
+}
