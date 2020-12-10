@@ -100,7 +100,7 @@ public class AuthorArticlesServiceImpl implements AuthorArticlesService {
 	public Map<String,Integer> getPublishedDateDetails() {
 		
 		List<Date> timeanalytics = new ArrayList<Date>(articlesRepo.getListofDatesPublished());
-		Map<String,Integer> dateMap = new HashMap<String,Integer>();
+		Map<String,Integer> dateMap = new LinkedHashMap<String,Integer>();
 		
 		
 		int pre_month = 0;
