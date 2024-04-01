@@ -15,7 +15,7 @@ services:
 
   mysqldb:
     container_name: mysqldb
-    image: mysql:5.7
+    image: mysql
     ports:
       - "3307:3306"
     volumes:
