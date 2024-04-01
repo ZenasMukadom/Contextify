@@ -27,7 +27,20 @@ A Web Content Management System (WCMS) is used for developing, editing, managing
  * Bootstrap
  * Javascript
  * MySQL Database
+ * Docker
 
+
+## Docker Compose to launch Contextify Spring Boot App and MYSQL
+
+## Run the App
+```bash
+docker-compose up -d
+```
+
+## Stop the App
+```bash
+docker-compose down
+```
 
 
 

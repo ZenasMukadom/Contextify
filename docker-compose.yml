@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  springboot-app:
+    container_name: contextify-spring-boot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: contextifydocker:v01
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      - mysqldb
+
+  mysqldb:
+    container_name: mysqldb
+    image: mysql:5.7
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: contextify
